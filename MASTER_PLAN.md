@@ -61,32 +61,16 @@ Perform customer discovery and obtain written authorization; define supported lo
 Demo host OS/RAM/CPU/GPU and disk; framework and persistence choices; exact Wazuh and n8n versions; fixture-first versus mandatory lab in initial release; local model and commercial/redistribution rights; thresholds for model candidate alerts; distribution method for model weights; brother's event contract and chosen notification providers; GitHub repository visibility and license. Resolve these during setup or before the dependent phase, without blocking independent planning.
 
 
-### Readiness update — 31 October 2026
-
-OpenCode confirmed `glm-5.3-flash-free` through a bridge reply. Kilo completed a no-edit `kilo/kilo-auto/free` CLI test; this is a free router, not a fixed named model, and the bridge does not provide native Kilo live push. Antigravity lists the requested Gemini 4 Argon and Gemini 3.8 Flash variants; a direct Gemini 3.8 Flash test returned READY, and a temporary Gemini 4 Argon session reported successful attach. However, no end-to-end live bridge reply from Antigravity was confirmed; the earlier delivery failed. The requested GPT-6.1 Luna identifier was not available in the listed Codex agent overrides (GPT-6 Luna is listed); do not substitute without the owner's agreement. Terra's planning audit completed. No project implementation has begun.
-
-### Agent preparation update — 31 October 2026
-
-No implementation started; local working tree still contains only the original planning artifacts as untracked files. Current checks:
-
-- OpenCode confirmed active `glm-5.3-flash-free`, planning readiness, and no file edits before an explicit start instruction. Assign it a bounded half of base implementation after contracts are agreed.
-- Kilo confirmed planning readiness and no file edits, but `kilo/kilo-auto/free` did not disclose the underlying model/provider. It is a router; confirm an actual free GLM model before relying on the requested GLM 5.3 assignment. Bridge push remains unsupported; use its CLI.
-- Antigravity Gemini 3.8 Flash returned a planning-readiness response and said it is attached to the bridge, but no persistent OQVIAN NetAegis Antigravity session appeared in the bridge registry afterward. Use a live bridge acknowledgment before relying on that channel.
-- Gemini 4 Argon is listed by `agy models`, but its no-edit planning test did not return before timeout. UI/design assignment remains unconfirmed.
-- GPT-6.1 Terra's independent planning audit is complete. GPT-6 Luna is the current Codex model for coordination/complex-case pairing.
-
-Suggested work split once started: agree on API/schema and design tokens first; OpenCode and Kilo each own distinct backend/demo-fixture slices; GPT Luna coordinates complex integration; Antigravity Gemini 3.8 Flash supports bounded complex implementation once bridge delivery is confirmed; Gemini 4 Argon owns UI proposal/review when its session responds; Terra audits architecture and security at checkpoints. No shared-file concurrent edits without an agreed owner.
-
 ### Implementation update — 31 October 2026
 
 This update supersedes the earlier planning-only readiness notes above. The owner authorized implementation. First slice now underway:
 
-- The root dashboard is the canonical UI because it is the active preview. The separate `frontend/` OpenCode preview remains untouched pending a later cleanup decision.
+- The root dashboard is the canonical UI for the active preview.
 - Root dashboard now has larger table/detail text, visible keyboard focus, a keyboard-trapped modal detail drawer with focus restoration, active row feedback, accessible mobile navigation labels, and correct disclosure state for the sample summary.
 - A dependency-free Node backend serves a fixture-only API, the root dashboard schema (`NET-1042`, `NET-1041`, `NET-1040`), local operator actions, a simulated workflow, and disabled Wazuh/model adapter seams. It binds to loopback by default.
 - The backend serves only the root dashboard's allowlisted HTML/CSS/JS assets on the same origin as the API. Browser actions use the backend when available and retain a browser-local fallback for static-only viewing.
-- Kilo authored `contracts/n8n-notification-event.schema.json` and `docs/n8n-contract.md` for the brother's independent n8n build. Kilo's free router selected `nvidia/nemotron-3.5-super-vl:free` for that run and reported zero cost; it did not use GLM.
-- OpenCode self-reported `glm-5.3-flash-free` while creating the backend slice. Antigravity Gemini 4 Argon (Medium) reviewed the root UI; the review informed the accessibility/readability changes.
+- The versioned n8n notification event contract is documented for the separate workflow build.
+- Accessibility and readability review informed the dashboard changes.
 
 The product still uses synthetic fixtures only. Wazuh, the local model, and real n8n/provider delivery are not connected. The model adapter is a disabled seam; no live monitoring or alerting capability is claimed. The local demo startup command is `node backend/server.js`.
 

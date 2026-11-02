@@ -39,18 +39,6 @@ The prior seven-day schedule is an optimistic estimate, not a promise. Set dates
 - First build and test a synthetic local notification sink. Test unauthorized requests, duplicates, timeouts, retries, n8n outage and recovery. No real messages or credentials in the public demo.
 - For a later authorized customer deployment: choose and verify WhatsApp, SMS and email providers and licenses, consent and recipient lists, message templates, security, retention, provider limits, delivery receipts and costs. Store credentials in a customer-approved secret store. Agree on ownership, testing, escalation, and operational support. Real notification setup requires explicit customer configuration and approval.
 
-## Agent assignments and coordination
-
-- **Codex coordinator:** maintain architecture, task boundaries, integration, review, tests and truthful progress reporting; no implementation until the owner starts it.
-- **GPT-6.1 Terra:** independent architectural/security auditor and advisor; review contracts, substantial changes and final acceptance. Planning audit completed.
-- **GPT-6.1 Luna and Antigravity Gemini 3.8 Flash:** intended shared responsibility for complex implementation. Assign separate, well-defined deliverables and review each other's work; 50/50 is a target, not a claim of measured output. Exact requested Gemini model and delivery must be verified.
-- **Antigravity Gemini 4 Argon:** intended dashboard and overall design lead; provide design specification and review. Model and delivery unverified.
-- **OpenCode GLM 5.3 free:** share base implementation with Kilo across non-overlapping files; OpenCode confirmed `glm-5.3-flash-free` and planning readiness.
-- **Kilo Code free-tier model:** share base implementation with OpenCode. CLI and bridge connection verified; active model and readiness unconfirmed. The bridge skill says Kilo does not have a native live-session push adapter; use its CLI to delegate and relay results, rather than assuming live-message delivery.
-- Use separate tasks and non-overlapping file ownership, agreed interfaces and integration checkpoints. Review and test every contribution centrally. Do not claim a model was used or an agent is ready without confirmation.
-
-Readiness at planning time: Terra audit completed; OpenCode responded and confirmed model; Antigravity bridge accepted a message but no reply was confirmed (the bridge later reported failure); Kilo installed with MCP connected but its model and actual task execution unverified; Luna is an available Codex model option but has not been launched or tested for this project. Agent/model availability may change. No source code or deployment has been started.
-
 ## Acceptance criteria
 
 - A documented clean start opens a synthetic dashboard locally, with three repeatable scenarios and an isolated reset; no real external messages are sent.
